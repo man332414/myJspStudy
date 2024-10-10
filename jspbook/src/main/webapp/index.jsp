@@ -46,7 +46,7 @@
 			<p><a href = "4_11"> getProperty 액션 태그 예제 4-11</a></p>
 		</div>
 	</div>
-	<!-- <form action = "4_0" method = "post">
+	<form action = "4_0" method = "post">
 		<input type = "text" name = "id" />
 		<br>
 		<input type = "text" name = "name" />
@@ -58,6 +58,6 @@
 		String name = "송근형";
 	%>
 	<p><a href = "4_0?id=<%=id%>&name=${name}"> useBean 액션 태그 예제 4-8</a></p>
-	 -->
+	
 </body>
 </html>
