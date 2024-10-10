@@ -28,7 +28,10 @@
 	<p><a href = "3_10"> page 디렉티브 태그 예제 3-10</a></p>
 	<p><a href = "3_11"> page 디렉티브 태그 예제 3-11</a></p>
 	<hr>
-	<p><a href = "4_1">예제 4-1</a></p>
+	<p><a href = "4_1"> forward 액션 태그 예제 4-1</a></p>
+	<p><a href = "4_2"> include 액션 태그 예제 4-2</a></p>
+	<p><a href = "4_3"> param 액션 태그 예제 4-3</a>
+	<p><a href = "4_4"> param 액션 태그 예제 4-4</a>
 	
 	
 </body>
