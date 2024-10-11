@@ -14,5 +14,7 @@
 	%>
 	<p>아 이 디 : <%=userId%></p>
 	<p>비밀번호 : <%=userPasswd%></p>
+	
+	<p><a href = "home">home</a></p>
 </body>
 </html>

@@ -9,20 +9,14 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/5_1")
-public class exam05_1 extends HttpServlet
+@WebServlet("/5_2")
+public class exam05_2 extends HttpServlet 
 {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
-//		System.out.println("연결");
-		String id = req.getParameter("id");
-		String passwd = req.getParameter("passwd");
-		req.setAttribute("id", id);
-		req.setAttribute("passwd", passwd);
-
-		RequestDispatcher ds = req.getRequestDispatcher("chapter05/request01_process.jsp");
+		RequestDispatcher ds = req.getRequestDispatcher("chapter05/request02.jsp");
 		ds.forward(req, resp);
 	}
 
