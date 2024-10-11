@@ -25,5 +25,7 @@
 		}
 	%>
 	</table>
+	
+	<p><a href = "home">home</a></p>
 </body>
 </html>

@@ -45,14 +45,17 @@
 			<p><a href = "4_10"> getProperty 액션 태그 예제 4-10</a></p>
 			<p><a href = "4_11"> getProperty 액션 태그 예제 4-11</a></p>
 		</div>
-		<form action = "5_1">
-			<p> 아 이 디 : <input type = "text" name = "id" /> </p>
-			<br>
-			<p> 비밀번호 : <input type = "password" name = "passwd" /></p>
-			<br>
-			<input type = "submit" value = "전송"></input>
-		</form>
-		<p><a href = "5_2">request 내장객체 예제 5-2</a></p>
+		<div>
+			<form action = "5_1">
+			<table>
+				<tr><th>아이디</th> <td><input type = "text" name = "id" /></td></tr>
+				<tr><th>비밀번호</th> <td><input type = "password" name = "passwd" /></td></tr>
+				<tr><th colspan = "2"><input type = "submit" value = "전송" /></th></tr>
+			</table>
+			</form>
+			<p><a href = "5_2">request 내장객체 예제 5-2</a></p>
+			<p><a href = "5_3">request 내장객체 예제 5-3</a></p>
+		</div>
 	</div>
 	<% 
 		String id = "admin";
