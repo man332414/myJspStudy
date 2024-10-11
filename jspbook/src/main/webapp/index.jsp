@@ -45,14 +45,14 @@
 			<p><a href = "4_10"> getProperty 액션 태그 예제 4-10</a></p>
 			<p><a href = "4_11"> getProperty 액션 태그 예제 4-11</a></p>
 		</div>
+		<form action = "request01_process">
+			<p> 아 이 디 : <input type = "text" name = "id" /> </p>
+			<br>
+			<p> 비밀번호 : <input type = "text" name = "passwd" /></p>
+			<br>
+			<input type = "submit" value = "전송"></input>
+		</form>
 	</div>
-	<form action = "4_0" method = "post">
-		<input type = "text" name = "id" />
-		<br>
-		<input type = "text" name = "name" />
-		<br>
-		<input type = "submit" value = "전송"></input>
-	</form>
 	<% 
 		String id = "admin";
 		String name = "송근형";
