@@ -33,7 +33,7 @@
 							<p><%=book.getAuthor()%>
 							<br><%=book.getPublisher()%> | <%=book.getUnitPrice()%>원
 							</p>
-							<p><%=book.getDescription().substring(0,60)%>...</p>
+							<p><%=book.getDescription()%>...</p>
 							<p><%=book.getUnitPrice()%>원</p>		
 						</div>
 					</div>

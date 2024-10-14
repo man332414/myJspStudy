@@ -1,4 +1,4 @@
-package chapter05;
+package controller;
 
 import java.io.IOException;
 
@@ -9,30 +9,23 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/5_8")
-public class exam05_8 extends HttpServlet 
+@WebServlet("/book")
+public class bookController extends HttpServlet
 {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
-		RequestDispatcher ds = req.getRequestDispatcher("chapter05/out02.jsp");
+		String bookid = req.getParameter("id");
+		req.setAttribute("id", bookid);
+		RequestDispatcher ds = req.getRequestDispatcher("book.jsp");
 		ds.forward(req, resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
-		//전처리
-		req.setCharacterEncoding("utf-8");
-		String userid = req.getParameter("id");
-		String userpw = req.getParameter("passwd");
-				
-		//이동
-		req.setAttribute("id", userid);
-		req.setAttribute("pw", userpw);
-		RequestDispatcher ds = req.getRequestDispatcher("chapter05/out02_process.jsp");
-		ds.forward(req, resp);
+		
 	}
 
 }
