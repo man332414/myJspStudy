@@ -4,12 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>어서와 집이야</title>
+<title>Implicit Objects</title>
 </head>
 <body>
-	실습 리스트
-	<p><a href = "2_1"> 예제 2-1</a></p>
-	<p><a href = "2_2"> 예제 2-2</a></p>
-	<p><a href = "2_3"> 예제 2-3</a></p>
+	로그인을 성공했습니다.
 </body>
 </html>

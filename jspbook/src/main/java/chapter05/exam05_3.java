@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/5_3")
-public class chapter05_3 extends HttpServlet 
+public class exam05_3 extends HttpServlet 
 {
 
 	@Override

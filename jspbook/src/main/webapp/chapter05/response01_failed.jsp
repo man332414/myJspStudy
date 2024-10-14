@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>어서와 집이야</title>
+<title>Insert title here</title>
 </head>
 <body>
-	실습 리스트
-	<p><a href = "2_1"> 예제 2-1</a></p>
-	<p><a href = "2_2"> 예제 2-2</a></p>
+	<p>로그인을 실패했습니다.</p>
+	<p> <a href = "5_4">로그인 가기</a>
 </body>
 </html>

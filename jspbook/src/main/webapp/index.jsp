@@ -55,6 +55,8 @@
 			</form>
 			<p><a href = "5_2">request 내장객체 예제 5-2</a></p>
 			<p><a href = "5_3">request 내장객체 예제 5-3</a></p>
+			<p><a href = "5_4">response 내장객체 예제 5-4</a></p>
+			<p><a href = "5_5">response 내장객체 예제 5-5</a></p>
 		</div>
 	</div>
 	<% 
