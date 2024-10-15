@@ -2,6 +2,9 @@ package controller;
 
 import java.io.IOException;
 
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+
 import dao.BookRepository;
 import dto.Book;
 import jakarta.servlet.RequestDispatcher;
@@ -25,16 +28,24 @@ public class addBookController extends HttpServlet
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
-		String bookId = req.getParameter("bookId");
-		String name = req.getParameter("name");
-		String unitPrice = req.getParameter("unitPrice");
-		String author = req.getParameter("author");
-		String publisher = req.getParameter("publisher");
-		String releaseDate = req.getParameter("releaseDate");
-		String description = req.getParameter("description");
-		String category = req.getParameter("category");
-		String unitsInSrock = req.getParameter("unitsInSrock");
-		String condition = req.getParameter("condition");
+		String filename = "";
+		String realFolder = req.getServletContext().getRealPath("resources\\images");
+		System.out.println(realFolder); 
+		//D:\sgh\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\bookmarket\resources\images
+		
+		MultipartRequest multi = new MultipartRequest(req, realFolder, 5*1024*1024, "utf-8", new DefaultFileRenamePolicy());
+		
+		String bookId = multi.getParameter("bookId");
+		String name = multi.getParameter("name");
+		String unitPrice = multi.getParameter("unitPrice");
+		String author = multi.getParameter("author");
+		String publisher = multi.getParameter("publisher");
+		String releaseDate = multi.getParameter("releaseDate");
+		String description = multi.getParameter("description");
+		String category = multi.getParameter("category");
+		String unitsInSrock = multi.getParameter("unitsInSrock");
+		String condition = multi.getParameter("condition");
+		String fileName = multi.getFilesystemName("BookImage");
 		
 		Integer price;
 		
@@ -71,6 +82,7 @@ public class addBookController extends HttpServlet
 		newBook.setCategory(category);
 		newBook.setUnitsInStock(stock);
 		newBook.setCondition(condition);
+		newBook.setFilename(fileName);
 		
 		dao.addBook(newBook);
 		
