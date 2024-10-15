@@ -65,6 +65,10 @@
 			<p><a href = "6_6">폼태그 예제 6-6</a></p>
 			
 		</div>
+		<hr>
+		<div>
+			<p><a href = "7_1">MultipartRequest 클래스 예제 7_1</a></p>
+		</div>
 	</div>
 	
 </body>
