@@ -68,6 +68,9 @@
 		<hr>
 		<div>
 			<p><a href = "7_1">MultipartRequest 클래스 예제 7_1</a></p>
+			<p><a href = "7_2">MultipartRequest 클래스 예제 7_2</a></p>
+			<p><a href = "7_3">Commons-FileUpload 클래스 예제 7_3</a></p>
+			
 		</div>
 	</div>
 	
