@@ -8,14 +8,14 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/books")
+@WebServlet("/bookList")
 public class bookListController extends HttpServlet 
 {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
-		RequestDispatcher ds = req.getRequestDispatcher("books.jsp");
+		RequestDispatcher ds = req.getRequestDispatcher("bookList.jsp");
 		ds.forward(req, resp);
 	}
 

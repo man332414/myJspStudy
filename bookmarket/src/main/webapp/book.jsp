@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import = "dto.Book" %>
-<jsp:useBean id = "bookDAO" class = "dao.BookRepository" scope = "session" />
+<%@ page import = "dao.BookRepository" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +20,8 @@
 		</div>
 		<%
 			String id = request.getParameter("id");
-			Book book = bookDAO.getBookById(id);
+			BookRepository dao = BookRepository.getInstance();
+			Book book = dao.getBookById(id);
 		%>
 		<div class = "row align-items-md-stretch">
 			<div class = "col-md-12">
@@ -35,7 +36,7 @@
 				<p> <b>재고수</b> : <%=book.getUnitsInStock() %></p>
 				<h4><%=book.getUnitPrice() %> 원</h4>
 				<p><a href = "#" class = "btn btn-info">도서주문</a>
-				<a href = "books" class = "btn btn-secondary">도서목록</a></p>
+				<a href = "bookList" class = "btn btn-secondary">도서목록</a></p>
 			</div>
 		</div>
 		<jsp:include page = "footer.jsp" />

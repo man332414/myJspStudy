@@ -6,10 +6,10 @@
 <meta charset="UTF-8">
 <title>어서와 집이야</title>
 </head>
-<body style = "padding : 0; margin: 0; text-decoration : none;">
+<body style = "margin : 0 10px 0 10px;">
 	실습 리스트
 	<div style = "display : flex; justify-content : space-between; flex-wrap : warp; width : 100%;">
-		<div style = "width : 30%;">
+		<div>
 			<p><a href = "2_1"> 선언문 태그 예제 2-1</a></p>
 			<p><a href = "2_2"> 선언문 태그 예제 2-2</a></p>
 			<p><a href = "2_3"> 선언문 태그 예제 2-3</a></p>
@@ -18,7 +18,8 @@
 			<p><a href = "2_6"> 표현문 태그 예제 2-6</a></p>
 			<p><a href = "2_7"> 표현문 태그 예제 2-7</a></p>
 		</div>
-		<div style = "width : 30%;">
+		<hr>
+		<div>
 			<p><a href = "3_1"> page 디렉티브 태그 예제 3-1</a></p>
 			<p><a href = "3_2"> page 디렉티브 태그 예제 3-2</a></p>
 			<p><a href = "3_3"> page 디렉티브 태그 예제 3-3</a></p>
@@ -29,7 +30,8 @@
 			<p><a href = "3_10"> page 디렉티브 태그 예제 3-10</a></p>
 			<p><a href = "3_11"> page 디렉티브 태그 예제 3-11</a></p>
 		</div>
-		<div style = "width : 30%;">
+		<hr>
+		<div>
 			<p><a href = "4_1"> forward 액션 태그 예제 4-1</a></p>
 			<p><a href = "4_2"> include 액션 태그 예제 4-2</a></p>
 			<p><a href = "4_3"> param 액션 태그 예제 4-3</a>
@@ -41,7 +43,8 @@
 			<p><a href = "4_10"> getProperty 액션 태그 예제 4-10</a></p>
 			<p><a href = "4_11"> getProperty 액션 태그 예제 4-11</a></p>
 		</div>
-		<div style = "width : 30%;">
+		<hr>
+		<div>
 			<form action = "5_1">
 			<table>
 				<tr><th>아이디</th> <td><input type = "text" name = "id" /></td></tr>
@@ -56,9 +59,11 @@
 			<p><a href = "5_7">out 내장객체 예제 5-6</a></p>
 			<p><a href = "5_8">out 내장객체 예제 5-7</a></p>
 		</div>
-		<br>
-		<div style = "width : 30%;">
+		<hr>
+		<div>
 			<p><a href = "6_1">폼태그 예제 6-1</a></p>
+			<p><a href = "6_6">폼태그 예제 6-6</a></p>
+			
 		</div>
 	</div>
 	

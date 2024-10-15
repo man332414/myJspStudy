@@ -1,8 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import = "java.util.ArrayList" %>
 <%@ page import = "dto.Book" %>
-<jsp:useBean id = "bookDAO" class = "dao.BookRepository" scope = "session"></jsp:useBean>
+<%@ page import = "dao.BookRepository" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,11 +15,12 @@
 	<div class = "p-5 mb-4 bg-body-tertiary rounded-3">
 		<div class = "container-fluid py-5">
 			<h1 class = "display-5 fw-bold">도서 목록</h1>
-			<p class = "col-md-8 fs-4">BookList</p>
+			<p class = "col-md-8 fs-4">Book List</p>
 		</div>
 	</div>
 	<%
-		ArrayList<Book> listOfBooks = bookDAO.getAllBooks();
+		BookRepository dao = BookRepository.getInstance();
+		ArrayList<Book> listOfBooks = dao.getAllBooks();
 	%>
 	<div class = "row align-items-md-stretch text-center">
 		<%
