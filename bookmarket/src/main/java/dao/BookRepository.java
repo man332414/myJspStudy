@@ -48,7 +48,7 @@ public class BookRepository
 		book3.setCategory("IT모바일");
 		book3.setUnitsInStock(1000);
 		book3.setReleaseDate("2023/01/01");
-		book3.setFilename("ISBN1235.jpg");
+		book3.setFilename("ISBN1236.jpg");
 		
 		listOfBooks.add(book1);
 		listOfBooks.add(book2);

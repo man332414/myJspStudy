@@ -29,7 +29,7 @@ public class addBookController extends HttpServlet
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
 		String filename = "";
-		String realFolder = req.getServletContext().getRealPath("resources\\images");
+		String realFolder = req.getServletContext().getRealPath("resources/images");
 		System.out.println(realFolder); 
 		//D:\sgh\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\bookmarket\resources\images
 		
