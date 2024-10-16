@@ -77,6 +77,9 @@
 		<div style = "width : 100%; text-align : center;">
 			<p><a href = "8_1">validation 예제 8-1</a></p>
 			<p><a href = "8_2">validation 예제 8-2</a></p>
+			<p><a href = "8_3">validation 예제 8-3</a></p>
+			<p><a href = "8_4">validation 예제 8-4</a></p>
+			<p><a href = "8_5">validation 예제 8-5</a></p>
 		</div>
 	</div>
 	

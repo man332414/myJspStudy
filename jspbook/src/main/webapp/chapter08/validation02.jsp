@@ -11,7 +11,7 @@
 		<p>아이디 : <input type = "text" name = "id" id = "id"></p>
 		<p>비밀번호 : <input type = "password" name = "passwd" id = "passwd"></p>
 		<p><input type = "button" value = "전송" id = "button"></p>
-	</form>
+	</form> 
 </body>
 <script>
 	let btn = document.querySelector("#button");
