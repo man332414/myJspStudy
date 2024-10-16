@@ -8,8 +8,8 @@
 </head>
 <body style = "margin : 0 10px 0 10px;">
 	실습 리스트
-	<div style = "display : flex; justify-content : space-between; flex-wrap : warp; width : 100%;">
-		<div>
+	<div style = "display : flex; justify-content : space-between; ">
+		<div style = "width : 100%; text-align : center;">
 			<p><a href = "2_1"> 선언문 태그 예제 2-1</a></p>
 			<p><a href = "2_2"> 선언문 태그 예제 2-2</a></p>
 			<p><a href = "2_3"> 선언문 태그 예제 2-3</a></p>
@@ -19,7 +19,7 @@
 			<p><a href = "2_7"> 표현문 태그 예제 2-7</a></p>
 		</div>
 		<hr>
-		<div>
+		<div style = "width : 100%; text-align : center;">
 			<p><a href = "3_1"> page 디렉티브 태그 예제 3-1</a></p>
 			<p><a href = "3_2"> page 디렉티브 태그 예제 3-2</a></p>
 			<p><a href = "3_3"> page 디렉티브 태그 예제 3-3</a></p>
@@ -31,7 +31,7 @@
 			<p><a href = "3_11"> page 디렉티브 태그 예제 3-11</a></p>
 		</div>
 		<hr>
-		<div>
+		<div style = "width : 100%; text-align : center;">
 			<p><a href = "4_1"> forward 액션 태그 예제 4-1</a></p>
 			<p><a href = "4_2"> include 액션 태그 예제 4-2</a></p>
 			<p><a href = "4_3"> param 액션 태그 예제 4-3</a>
@@ -44,7 +44,7 @@
 			<p><a href = "4_11"> getProperty 액션 태그 예제 4-11</a></p>
 		</div>
 		<hr>
-		<div>
+		<div style = "width : 100%; text-align : center;">
 			<form action = "5_1">
 			<table>
 				<tr><th>아이디</th> <td><input type = "text" name = "id" /></td></tr>
@@ -59,18 +59,24 @@
 			<p><a href = "5_7">out 내장객체 예제 5-6</a></p>
 			<p><a href = "5_8">out 내장객체 예제 5-7</a></p>
 		</div>
-		<hr>
-		<div>
+	</div>
+	<div style = "display : flex; justify-content : space-between;">
+		<div style = "width : 100%; text-align : center;">
 			<p><a href = "6_1">폼태그 예제 6-1</a></p>
 			<p><a href = "6_6">폼태그 예제 6-6</a></p>
 			
 		</div>
 		<hr>
-		<div>
-			<p><a href = "7_1">MultipartRequest 클래스 예제 7_1</a></p>
-			<p><a href = "7_2">MultipartRequest 클래스 예제 7_2</a></p>
-			<p><a href = "7_3">Commons-FileUpload 클래스 예제 7_3</a></p>
-			<p><a href = "7_4">Commons-FileUpload 클래스 예제 7_4</a></p>
+		<div style = "width : 100%; text-align : center;">
+			<p><a href = "7_1">MultipartRequest 클래스 예제 7-1</a></p>
+			<p><a href = "7_2">MultipartRequest 클래스 예제 7-2</a></p>
+			<p><a href = "7_3">Commons-FileUpload 클래스 예제 7-3</a></p>
+			<p><a href = "7_4">Commons-FileUpload 클래스 예제 7-4</a></p>
+		</div>
+		<hr>
+		<div style = "width : 100%; text-align : center;">
+			<p><a href = "8_1">validation 예제 8-1</a></p>
+			<p><a href = "8_2">validation 예제 8-2</a></p>
 		</div>
 	</div>
 	
