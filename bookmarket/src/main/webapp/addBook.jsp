@@ -20,41 +20,41 @@
 		</div>
 		
 		<div class = "row align-items-md-stretch">
-			<form action = "addBook" method = "post" enctype = "multipart/form-data" class = "form-horizontal">
+			<form action = "addBook" method = "post" enctype = "multipart/form-data" class = "form-horizontal" id = "form">
 				<div class = "mb-3 row">
 					<label class = "col-sm-2">도서코드</label>
 					<div class = "col-sm-3">
-						<input type = "text" name = "bookId">
+						<input type = "text" name = "bookId" id = "bookId">
 					</div>
 				</div>
 				<div class = "mb-3 row">
 					<label class = "col-sm-2">도서명</label>
 					<div class = "col-sm-3">
-						<input type = "text" name = "name">
+						<input type = "text" name = "name" id = "name">
 					</div>
 				</div>
 				<div class = "mb-3 row">
 					<label class = "col-sm-2">가격</label>
 					<div class = "col-sm-3">
-						<input type = "text" name = "unitPrice">
+						<input type = "text" name = "unitPrice" id = "unitPrice">
 					</div>
 				</div>
 				<div class = "mb-3 row">
 					<label class = "col-sm-2">저자</label>
 					<div class = "col-sm-3">
-						<input type = "text" name = "author">
+						<input type = "text" name = "author" id = "author">
 					</div>
 				</div>
 				<div class = "mb-3 row">
 					<label class = "col-sm-2">출판사</label>
 					<div class = "col-sm-3">
-						<input type = "text" name = "publisher">
+						<input type = "text" name = "publisher" id = "publisher">
 					</div>
 				</div>
 				<div class = "mb-3 row">
 					<label class = "col-sm-2">출판일</label>
 					<div class = "col-sm-3">
-						<input type = "text" name = "releaseDate">
+						<input type = "text" name = "releaseDate" id = "releaseDate">
 					</div>
 				</div>
 				<div class = "mb-3 row">
@@ -66,13 +66,13 @@
 				<div class = "mb-3 row">
 					<label class = "col-sm-2">분류</label>
 					<div class = "col-sm-3">
-						<input type = "text" name = "category">
+						<input type = "text" name = "category" id = "category">
 					</div>
 				</div>
 				<div class = "mb-3 row">
 					<label class = "col-sm-2">재고수</label>
 					<div class = "col-sm-3">
-						<input type = "text" name = "unitsInSrock">
+						<input type = "text" name = "unitsInSrock" id = "unitsInSrock">
 					</div>
 				</div>
 				<div class = "mb-3 row">
@@ -91,12 +91,13 @@
 				</div>
 				<div class = "mb-3 row">
 					<div class = "col-sm-offset-2 col-sm-10">
-						<input type = "submit" value = "등록">
+						<input type = "button" value = "등록" id = "btn">
 					</div>
 				</div>
 			</form>
 		</div>
 		<jsp:include page = "footer.jsp" />
 	</div>
+	<script type="text/javascript" src = "./resources/js/validation.js"></script>
 </body>
 </html>
