@@ -81,9 +81,11 @@
 			<p><a href = "8_4">validation 예제 8-4</a></p>
 			<p><a href = "8_5">validation 예제 8-5</a></p>
 		</div>
+		<hr>
 		<div style = "width : 100%; text-align : center;">
 			<p><a href = "9_1">Internationalization 예제 9-1</a></p>
 			<p><a href = "9_2">Internationalization 예제 9-2</a></p>
+			<p><a href = "9_3">Internationalization 예제 9-3</a></p>
 		</div>			
 	</div>
 	
