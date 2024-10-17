@@ -26,6 +26,7 @@ public class exam07_2 extends HttpServlet
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
+		req.setCharacterEncoding("utf-8");
 		String save = req.getServletContext().getRealPath("img");
 		System.out.println(save);
 		MultipartRequest multi = new MultipartRequest(req, save, 10*1024*1024, "utf-8", new DefaultFileRenamePolicy());

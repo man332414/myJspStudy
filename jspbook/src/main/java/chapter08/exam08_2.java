@@ -24,6 +24,7 @@ public class exam08_2 extends HttpServlet
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
 		//전처리
+		req.setCharacterEncoding("utf-8");
 		String id = req.getParameter("id");
 		String pw = req.getParameter("passwd");
 		System.out.println(id);

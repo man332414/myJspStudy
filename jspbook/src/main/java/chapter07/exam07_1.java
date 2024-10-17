@@ -26,6 +26,7 @@ public class exam07_1 extends HttpServlet
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
 		//전처리
+		req.setCharacterEncoding("utf-8");
 		String save = req.getServletContext().getRealPath("img");
 		MultipartRequest multi = new MultipartRequest(req, save, 5*1024*1024, "utf-8", new DefaultFileRenamePolicy());
 		//직접 하나씩 처리하는 경우

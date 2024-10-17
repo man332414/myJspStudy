@@ -16,6 +16,7 @@ public class bookController extends HttpServlet
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
+		req.setCharacterEncoding("utf-8");
 		String bookid = req.getParameter("id");
 		req.setAttribute("id", bookid);
 		RequestDispatcher ds = req.getRequestDispatcher("book.jsp");

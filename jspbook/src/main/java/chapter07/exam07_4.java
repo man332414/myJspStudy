@@ -30,6 +30,7 @@ public class exam07_4 extends HttpServlet
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
 		//전처리
+		req.setCharacterEncoding("utf-8");
 		String save = req.getServletContext().getRealPath("img");
 		DiskFileUpload upload = new DiskFileUpload();
 		upload.setRepositoryPath(save);

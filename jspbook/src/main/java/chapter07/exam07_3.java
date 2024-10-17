@@ -27,6 +27,7 @@ public class exam07_3 extends HttpServlet
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
 		//전처리
+		req.setCharacterEncoding("utf-8");
 		String save = req.getServletContext().getRealPath("img");
 		System.out.println(save);
 		
