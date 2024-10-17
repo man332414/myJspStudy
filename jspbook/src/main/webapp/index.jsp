@@ -86,6 +86,7 @@
 			<p><a href = "9_1">Internationalization 예제 9-1</a></p>
 			<p><a href = "9_2">Internationalization 예제 9-2</a></p>
 			<p><a href = "9_3">Internationalization 예제 9-3</a></p>
+			<p><a href = "9_4">Internationalization 예제 9-4</a></p>
 		</div>			
 	</div>
 	
