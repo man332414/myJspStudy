@@ -4,4 +4,26 @@
   <welcome-file-list>
     <welcome-file>welcome.jsp</welcome-file>
   </welcome-file-list>
+  <!-- 어떤 그룹의 -->
+  <security-constraint>
+  	<display-name>bookmarket security</display-name>
+  	<web-resource-collection>
+		<web-resource-name>bookmarket</web-resource-name>
+		<description></description>
+		<url-pattern>/addBook</url-pattern>	
+  	</web-resource-collection>
+    <!-- 누구를 검사할 것인지  -->
+	<auth-constraint>
+		<description>권한 관리자명</description>
+		<role-name>admin</role-name>
+	</auth-constraint>
+  </security-constraint>
+   	<!-- 검사 방법 지정 -->
+   	<login-config>
+   		<auth-method>FORM</auth-method>
+   		<form-login-config>
+   			<form-login-page>/login.jsp</form-login-page>
+   			<form-error-page>/login_failed.jsp</form-error-page>
+   		</form-login-config>
+   	</login-config>
 </web-app>

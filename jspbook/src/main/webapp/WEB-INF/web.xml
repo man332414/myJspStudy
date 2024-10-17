@@ -4,4 +4,29 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+
+  <!-- 어떤 그룹의 -->
+  <security-role>
+  	<role-name>manager</role-name>
+  </security-role>
+  <security-constraint>
+  <!-- 누구를 검사할 것인지  -->
+  	<web-resource-collection>
+  		<web-resource-name>jspbook</web-resource-name>
+  		<url-pattern>/10_2</url-pattern>
+  		<http-method>GET</http-method>
+  	</web-resource-collection>
+  	<!-- 검사 방법 지정 -->
+  	<auth-constraint>
+  		<description></description>
+  		<role-name>manager</role-name>
+  	</auth-constraint>
+  </security-constraint>
+  <login-config>
+  	<auth-method>FORM</auth-method>
+  	<form-login-config>
+  		<form-login-page>/chapter10/login.jsp</form-login-page>
+  		<form-error-page>/chapter19/login_failed.jsp</form-error-page>
+  	</form-login-config>
+  </login-config>
 </web-app>

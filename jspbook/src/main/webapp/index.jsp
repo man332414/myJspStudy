@@ -64,7 +64,6 @@
 		<div style = "width : 100%; text-align : center;">
 			<p><a href = "6_1">폼태그 예제 6-1</a></p>
 			<p><a href = "6_6">폼태그 예제 6-6</a></p>
-			
 		</div>
 		<hr>
 		<div style = "width : 100%; text-align : center;">
@@ -88,6 +87,12 @@
 			<p><a href = "9_3">Internationalization 예제 9-3</a></p>
 			<p><a href = "9_4">Internationalization 예제 9-4</a></p>
 		</div>			
+	</div>
+	<div style = "display : flex; justify-content : space-between;">
+		<div style = "width : 100%; text-align : center;">
+			<p><a href = "10_1">Security 예제 10-1, 2</a></p>
+			<p><a href = "10_2">Security 예제 10-3</a></p>
+		</div>
 	</div>
 	
 </body>
