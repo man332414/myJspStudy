@@ -12,7 +12,7 @@
 	String num2 = (String)request.getAttribute("num2");
 	
 	int a = Integer.parseInt(num1);
-	double b = Integer.parseInt(num2);
+	int b = Integer.parseInt(num2);
 	double c = a/b;
 	
 	out.print(a + " / " + b + " = " + c);

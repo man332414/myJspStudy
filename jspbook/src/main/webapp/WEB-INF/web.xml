@@ -29,4 +29,17 @@
   		<form-error-page>/chapter19/login_failed.jsp</form-error-page>
   	</form-login-config>
   </login-config>
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/chapter11/errorCode_error505.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/chapter11/errorCode_error404.jsp</location>
+  </error-page>
+    <error-page>
+  	<exception-type>java.lang.Exception</exception-type>
+  	<location>/chapter11/exceptionType_error.jsp</location>
+  </error-page>
+  
 </web-app>
