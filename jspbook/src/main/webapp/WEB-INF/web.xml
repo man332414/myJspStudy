@@ -41,5 +41,12 @@
   	<exception-type>java.lang.Exception</exception-type>
   	<location>/chapter11/exceptionType_error.jsp</location>
   </error-page>
-  
+  <filter>
+  	<filter-name>filter01</filter-name>
+  	<filter-class>chapter12.filter.AuthenFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>filter01</filter-name>
+  	<url-pattern>/chapter12/filter01_process.jsp</url-pattern>
+  </filter-mapping>
 </web-app>

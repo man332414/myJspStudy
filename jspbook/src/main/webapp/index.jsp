@@ -101,6 +101,9 @@
 			<p><a href = "11_5">web.xml 예제 11-5</a></p>
 			<p><a href = "11_6">try/catch 예제 11-6</a></p>
 		</div>
+		<div style = "width : 100%; text-align : center;">
+			<p><a href = "12_1">Filter 예제 12-1</a></p>
+		</div>
 	</div>
 	
 </body>
