@@ -1,0 +1,8 @@
+package test;
+
+import java.util.Enumeration;
+
+public class exam01_1 
+{
+	Enumeration es = new Enumeration();
+}

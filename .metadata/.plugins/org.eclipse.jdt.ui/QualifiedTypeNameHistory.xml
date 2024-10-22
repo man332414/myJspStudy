@@ -2,6 +2,8 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="dao.BookRepository"/>
     <fullyQualifiedTypeName name="org.apache.commons.fileupload.DiskFileUpload"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.Filter"/>
+    <fullyQualifiedTypeName name="javax.print.attribute.SetOfIntegerSyntax"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
     <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>

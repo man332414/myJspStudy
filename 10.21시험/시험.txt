@@ -1,0 +1,83 @@
+1. 
+전역변수 선언 코드 : <%! int count = 0; %>
+출력문 코드 : <% out.print(count) %>
+                 <%=count%>
+
+2. 
+import : <%@ page import = "java.util.Date" %>
+객체생성 및 출력 :  <%=new Date() %>
+
+3. 
+<!-- header.jsp -->
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<body>
+	<h4> hello, java Server page</h4>
+</body>
+</html>
+<!-- include.jsp -->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>include</title>
+</head>
+<body>
+	<%@ include file = "header.jsp" %>
+	<h1>삽입된 페이지 입니다.</h1>
+</body>
+</html>
+
+4.
+<!-- forward.jsp -->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>forward</title>
+</head>
+<body>
+	<a href = "result.jsp?id=admin">go result</a>
+</body>
+</html>
+
+<!--result.jsp -->
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>result</title>
+</head>
+<body>
+	<%
+		String id = request.getParameter("id");
+	%>
+	id : <%= id %>
+</body>
+</html>
+
+5. <jsp:useBean id="sc" class = "java.util.Scanner"  scope = "page" ></jsp:useBean>
+
+
+6. 
+	<%
+		String id = request.getParameter("id");
+	%>
+	id : <%= id %>
+
+7.
+(1)request.getHeaderNames();
+(2)
+(3)request.getHeader(headerName);
+
+8. 
+(1)multipart/form-data
+(2)MultipartRequest multi = new MultipartRequest(request, save, 5*1024*1024, "utf-8", new DefaultFileRenamePolicy());
+(3)String filename = multi.getFilesystemName("filename");
+
