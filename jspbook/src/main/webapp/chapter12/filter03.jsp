@@ -11,5 +11,9 @@
 		<p><input type = "password" name = "passwd"></p>
 		<p><input type = "submit" value = "제출"></p>
 	</form>
+		<form action = "12_3" method = "post">
+		<input type = "submit" value = "Enumeration">
+		</form>
+	
 </body>
 </html>

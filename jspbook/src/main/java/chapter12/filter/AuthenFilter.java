@@ -17,7 +17,7 @@ public class AuthenFilter implements Filter
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException 
 	{
-		System.out.println("초기화");
+//		System.out.println("초기화");
 	}
 
 	@Override

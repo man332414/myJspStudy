@@ -16,7 +16,7 @@ public class InitParamFilter implements Filter
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException 
 	{
-		System.out.println("Filter02 초기화");
+//		System.out.println("Filter02 초기화");
 		this.filterConfig = filterConfig;
 	}
 

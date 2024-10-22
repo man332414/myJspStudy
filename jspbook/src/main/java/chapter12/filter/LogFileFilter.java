@@ -21,9 +21,9 @@ public class LogFileFilter implements Filter
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException 
 	{
-		System.out.println("Filter03 초기화");
+//		System.out.println("Filter03 초기화");
 		String filename = filterConfig.getInitParameter("filename");
-		System.out.println("filename : " + filename);
+//		System.out.println("filename : " + filename);
 		if(filename == null)
 		{
 			throw new ServletException("로그 파일의 이름을 찾을 수 없습니다.");

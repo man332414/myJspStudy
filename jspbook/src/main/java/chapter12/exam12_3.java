@@ -1,6 +1,7 @@
 package chapter12;
 
 import java.io.IOException;
+import java.util.Enumeration;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -28,7 +29,6 @@ public class exam12_3 extends HttpServlet
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
-		
 	}
 	
 }
