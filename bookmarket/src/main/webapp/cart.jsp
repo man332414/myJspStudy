@@ -26,8 +26,8 @@
 			<div class = "row">
 				<table width = "100%">
 					<tr>
-						<td align = "left"><a href = "resetCart" class = "btn btn-danger">삭제하기</a></td>
-						<td align = "right"><a class = "btn btn-success">주문하기</a></td>
+						<td align = "left"><a href = "resetCart" class = "btn btn-danger">모두 삭제하기</a></td>
+						<td align = "right"><a href = "shippingInfo" class = "btn btn-success">주문하기</a></td>
 					</tr>
 				</table>
 				<div style = "padding-top:50px">
