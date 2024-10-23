@@ -3,6 +3,8 @@ D:\sgh\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2628439002.inde
 \jspbook\src\main\java
 D:\sgh\jsp1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3295106128.index
 \jsp_example\src\main\java
+D:\sgh\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2500944624.index
+\jspbook\src\main\java
 D:\sgh\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3276759305.index
 \bookmarket\src\main\java
 D:\sgh\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3442263531.index

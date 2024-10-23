@@ -108,7 +108,13 @@
 		</div>
 		<div style = "width : 100%; text-align : center;">
 			<p><a href = "13">로그인</a></p>
-			<p><a href = "13_1">Session 예제 13-1,2,3,4,5</a></p>
+			<p><a href = "13_1">Session 예제 13-1,2,3,4,5,6,7,8</a></p>
+		</div>
+	</div>
+	<div style = "display : flex; justify-content : space-between;">
+		<div style = "width : 100%; text-align : center;">
+			<p><a href = "14_1">cookie 예제 14-1</a></p>
+			<p><a href = "14_2">cookie 예제 14-2</a></p>
 		</div>
 	</div>
 </body>

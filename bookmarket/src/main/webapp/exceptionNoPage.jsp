@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class = "jumbotron">
-		<div class = "container">
+		<div class = "container py-4">
 			<jsp:include page = "menu.jsp"></jsp:include>
 			<h2 class = "alert alert-danger">요청하신 페이지를 찾을 수 없습니다.</h2>
 		</div>
