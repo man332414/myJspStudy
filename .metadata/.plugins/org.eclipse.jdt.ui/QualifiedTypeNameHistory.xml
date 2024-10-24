@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="dao.BookRepository"/>
     <fullyQualifiedTypeName name="org.apache.commons.fileupload.DiskFileUpload"/>
     <fullyQualifiedTypeName name="javax.print.attribute.SetOfIntegerSyntax"/>
     <fullyQualifiedTypeName name="jakarta.servlet.ServletException"/>
@@ -13,8 +12,14 @@
     <fullyQualifiedTypeName name="jakarta.servlet.Filter"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="java.util.Enumeration"/>
+    <fullyQualifiedTypeName name="dao.BookRepository"/>
+    <fullyQualifiedTypeName name="dto.Book"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="jakarta.websocket.Session"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="java.net.URLEncoder"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.Cookie"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
     <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
