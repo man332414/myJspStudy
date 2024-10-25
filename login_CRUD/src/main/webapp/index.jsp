@@ -7,6 +7,7 @@
 <title>Login CRUD</title>
 </head>
 <body>
-	<a href = "join">회원가입</a>
+	<p><a href = "join">회원가입</a></p>
+	<p><a href = "readall">전체회원보기</a></p>
 </body>
 </html>

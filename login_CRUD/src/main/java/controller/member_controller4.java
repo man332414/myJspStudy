@@ -11,14 +11,22 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/join")
-public class member_controller extends HttpServlet 
+@WebServlet("/update")
+public class member_controller4 extends HttpServlet 
 {
-//목표 CREATE 데이터를 데이터베이스에 입력하는 것이 목표
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
-		RequestDispatcher ds = req.getRequestDispatcher("join.jsp");
+		//전처리
+		String userid = req.getParameter("id");
+		//모델이동
+		member_repository mr = member_repository.getInstance();
+		member_DTO dto = mr.getOnemember(userid);
+		System.out.println(dto.getId());
+		//페이지이동
+		req.setAttribute("DTO", dto);
+		RequestDispatcher ds = req.getRequestDispatcher("updateform.jsp");
 		ds.forward(req, resp);
 	}
 
@@ -26,11 +34,12 @@ public class member_controller extends HttpServlet
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
 		//전처리
-		req.setCharacterEncoding("utf-8");
 		String id = req.getParameter("id");
 		String pw = req.getParameter("pw");
-		int age = Integer.parseInt(req.getParameter("age"));
-//		System.out.printf("%s, %s, %d",id, pw, age);
+		Integer age = Integer.parseInt(req.getParameter("age"));
+		System.out.println(id);
+		System.out.println(pw);
+		System.out.println(age);
 		
 		member_DTO dto = new member_DTO();
 		dto.setId(id);
@@ -39,10 +48,8 @@ public class member_controller extends HttpServlet
 		
 		//모델이동
 		member_repository mr = member_repository.getInstance();
-		mr.member_create(dto);
-		
-		//뷰 이동
+		mr.updatemember(dto);
+		//페이지 이동
 		resp.sendRedirect("readall");
 	}
-
 }
