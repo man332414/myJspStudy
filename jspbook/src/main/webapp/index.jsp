@@ -116,6 +116,11 @@
 			<p><a href = "14_1">cookie 예제 14-1</a></p>
 			<p><a href = "14_2">cookie 예제 14-2</a></p>
 		</div>
+		<div style = "width : 100%; text-align : center;">
+			<p><a href = "16_1">DB 연결 예제 16-1, 2</a></p>
+			<p><a href = "16_3">CREATE 예제 16-3</a></p>
+			<p><a href = "16_5">RU 예제 16-5, 7</a></p>
+		</div>	
 	</div>
 </body>
 </html>

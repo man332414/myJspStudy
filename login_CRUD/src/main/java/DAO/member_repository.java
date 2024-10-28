@@ -5,14 +5,13 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-
 import DTO.member_DTO;
 
 public class member_repository 
 {
 	//1개만 존재해야 하므로 싱글턴으로 작성
 	private static member_repository mr = new member_repository();
-	// static로 미리 객체생성
+	// static으로 미리 객체생성
 	public static member_repository getInstance()
 	{
 		return mr;
@@ -22,7 +21,7 @@ public class member_repository
 	//데이터베이스 연결 메서드
 	private Connection DBconn() throws Exception
 	{
-		// step 1 : JDBC 드라이버 로딩
+			// step 1 : JDBC 드라이버 로딩
 			Class.forName("com.mysql.jdbc.Driver");
 			// step 2 : Connection 객체 생성
 			Connection conn = null;
@@ -74,19 +73,19 @@ public class member_repository
 	public ArrayList<member_DTO> getAllmember()
 	{
 		ArrayList<member_DTO> arr = new ArrayList<member_DTO>();
-		ResultSet re = null;
 		try 
 		{
 			Connection conn = DBconn();
 			Statement stmt = conn.createStatement();
 			// step 3 : SQL 전송객체 생성 및 전송
+			ResultSet rs = null;
 			String sql = "select * from member";
-			re = stmt.executeQuery(sql);
-			while(re.next())
+			rs = stmt.executeQuery(sql);
+			while(rs.next())
 			{                // column명
-				String id = re.getString("id");
-				String pw = re.getString("pw");
-				int age = re.getInt("age");
+				String id = rs.getString("id");
+				String pw = rs.getString("pw");
+				int age = rs.getInt("age");
 				
 				member_DTO dto = new member_DTO();
 				dto.setId(id);
