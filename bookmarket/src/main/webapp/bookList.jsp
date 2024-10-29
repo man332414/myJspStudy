@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import = "java.util.ArrayList" %>
 <%@ page import = "dto.Book" %>
-<%@ page import = "dao.BookRepository" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,8 +19,7 @@
 		</div>
 	</div>
 	<%
-		BookRepository dao = BookRepository.getInstance();
-		ArrayList<Book> listOfBooks = dao.getAllBooks();
+		ArrayList<Book> listOfBooks = (ArrayList<Book>)request.getAttribute("arr");
 	%>
 	<div class = "row align-items-md-stretch text-center">
 		<%
@@ -32,11 +30,11 @@
 				<div class = "col-md-4">
 					<div class = "h-100 p-2">
 						<img src = "./resources/images/<%=book.getFilename()%>" style = "width : 250px; height : 350px;">
-						<h5><b><%=book.getName()%></b></h5>
+						<h5><b><%=book.getBookname()%></b></h5>
 						<p><%=book.getAuthor()%>
 						<br><%=book.getPublisher()%> | <%=book.getUnitPrice()%>원
 						</p>
-						<p><%=book.getDescription()%>...</p>
+						<p><%=book.getBookdescription()%>...</p>
 						<p><%=book.getUnitPrice()%>원</p>
 						<p> <a href = "book?id=<%=book.getBookId() %>" class = "btn btn-secondary" role = "button">
 						상세정보 &raquo;</a></p>

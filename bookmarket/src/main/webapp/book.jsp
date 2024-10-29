@@ -30,8 +30,8 @@
 				<img src = "./resources/images/<%=book.getFilename()%>" style = "width: 70%;">
 			</div>
 			<div class = "col-md-6">
-				<h3><b><%=book.getName() %></b></h3>
-				<p><%=book.getDescription() %></p>
+				<h3><b><%=book.getBookname() %></b></h3>
+				<p><%=book.getBookdescription() %></p>
 				<p> <b>도서코드 : </b> <span class = "badge text-bg-danger">
 									<%=book.getBookId() %></span></p>
 				<p> <b>저자</b> : <%=book.getAuthor() %></p>

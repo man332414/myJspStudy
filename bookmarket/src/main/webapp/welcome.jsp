@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class = "container py-4">
-	<%@include file = "menu.jsp" %>
+		<%@include file = "menu.jsp" %>
 		<%!
 			String greeting = "Welcome to Books Shopping Mall";
 			String tagline = "Welcome to Web Market !";

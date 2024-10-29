@@ -21,6 +21,10 @@ public class addBookController extends HttpServlet
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
+		System.out.println("addBook doGet 도착");
+		//전처리
+		//모델이동
+		//뷰 이동
 		RequestDispatcher ds = req.getRequestDispatcher("addBook.jsp");
 		ds.forward(req, resp);
 	}
@@ -28,6 +32,8 @@ public class addBookController extends HttpServlet
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
+		System.out.println("addBook doPost 도착");
+		//전처리
 		String filename = "";
 		String realFolder = req.getServletContext().getRealPath("resources/images");
 		System.out.println(realFolder); 
@@ -73,19 +79,23 @@ public class addBookController extends HttpServlet
 		
 		Book newBook = new Book();
 		newBook.setBookId(bookId);
-		newBook.setName(name);
+		newBook.setBookname(name);
 		newBook.setUnitPrice(price);
 		newBook.setAuthor(author);
 		newBook.setPublisher(publisher);
 		newBook.setReleaseDate(releaseDate);
-		newBook.setDescription(description);
+		newBook.setBookdescription(description);
 		newBook.setCategory(category);
 		newBook.setUnitsInStock(stock);
-		newBook.setCondition(condition);
+		newBook.setBookcondition(condition);
 		newBook.setFilename(fileName);
 		
 		dao.addBook(newBook);
 		
+		
+		//모델이동
+		
+		//뷰 이동
 		resp.sendRedirect("bookList");
 	}
 

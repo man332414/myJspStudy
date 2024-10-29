@@ -172,4 +172,23 @@ public class exam_repository
 		catch (SQLException e) {e.printStackTrace();}
 		// ResultSet 처리
 	}
+
+	public void delete(String id) 
+	{
+		System.out.println("delete 연결 " + id);
+		try 
+		{
+			//db연결
+			Connection conn = DBconn();
+		
+			//sql 작성 및 편집
+			String sql = "delete from member where id=?";
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			pstmt.executeUpdate();
+			// resultset 객체 생성
+			pstmt.close();
+			conn.close();
+		} catch (SQLException e) {e.printStackTrace();}
+	}
 }

@@ -25,7 +25,7 @@
 				String name = dto.getName();
 		%>
 		<tr>
-			<td><%=id %></td><td><%=pw %></td><td><%=name %></td><td><a href = "16_7?id=<%=id%>">수정</a></td><td><a href = "16_8?id=<%=id%>">삭제</a></td>
+			<td><%=id %></td><td><%=pw %></td><td><%=name %></td><td><a href = "16_7?id=<%=id%>">수정</a></td><td><a href = "16_9?id=<%=id%>">삭제</a></td>
 		</tr>
 		<%
 			}
