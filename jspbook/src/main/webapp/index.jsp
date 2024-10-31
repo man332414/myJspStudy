@@ -121,6 +121,11 @@
 			<p><a href = "16_3">CREATE 예제 16-3</a></p>
 			<p><a href = "16_5">RU 예제 16-5, 7</a></p>
 		</div>	
+		<div style = "width : 100%; text-align : center;">
+			<p><a href = "17_1">core 태그 예제 17-1</a></p>
+			<p><a href = "17_2">core 태그 예제 17-2</a></p>
+			<p><a href = "17_3">core 태그 예제 17-3</a></p>
+		</div>	
 	</div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+<%@ page session = "false" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import = "java.util.ArrayList" %>
 <%@ page import = "dto.Book" %>
@@ -7,14 +8,14 @@
 <head>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 	<meta charset="UTF-8">
-	<%
-		String cartId = session.getId();
-	%>
 	<title>장바구니</title>
 </head>
 <body>
 	<div class = "container py-4">
 		<%@ include file = "menu.jsp" %>
+	<%
+		String cartId = session.getId();
+	%>
 		<div class = "p-5 mb-4 by-body-tertiary rounded-3">
 			<div class = " container-fluid py-5">
 				<h1 class = "display-5">장바구니</h1>

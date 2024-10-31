@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page session = "false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class = "container py-4">
-		<%@include file = "menu.jsp" %>
+	<jsp:include page="./menu.jsp" />
 		<%!
 			String greeting = "Welcome to Books Shopping Mall";
 			String tagline = "Welcome to Web Market !";
@@ -29,7 +29,7 @@
 			</div>
 		</div>
 		
-		<%@include file = "footer.jsp" %>				
+	<jsp:include page="./footer.jsp" />
 	</div>
 </body>
 </html>
