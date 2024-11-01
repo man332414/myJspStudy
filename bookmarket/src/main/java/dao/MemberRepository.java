@@ -15,10 +15,13 @@ public class MemberRepository
 		return mr;
 	}
 	
+	Connection conn = null;
+	PreparedStatement pstmt = null;
+	
 	//DB 연결
 	Connection DBconn() throws Exception
 	{
-		Connection conn = null;
+		conn = null;
 		Class.forName("com.mysql.jdbc.Driver");
 		String url = "jdbc:mysql://localhost:3306/bookmarketDB";
 		String root = "root";
@@ -34,10 +37,10 @@ public class MemberRepository
 		//database 연결
 		try 
 		{
-			Connection conn = DBconn();
+			conn = DBconn();
 			//sql 전송
 			String sql = "insert into member values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
-			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt = conn.prepareStatement(sql);
 			
 			pstmt.setString(1, mb.getId());
 			pstmt.setString(2, mb.getPassword());
@@ -58,18 +61,16 @@ public class MemberRepository
 		catch (Exception e) {e.printStackTrace();}
 	}
 	//r
-	//u
-	//d
 	public Member getUesr(String id, String password) 
 	{
 		Member returnData = new Member();				
 		//DB 연결
 		try 
 		{
-			Connection conn = DBconn();
+			conn = DBconn();
 			//sql 작성
 			String sql = "select * from member where id=? and password=?";
-			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt = conn.prepareStatement(sql);
 			
 			pstmt.setString(1, id);
 			pstmt.setString(2, password);
@@ -94,4 +95,55 @@ public class MemberRepository
 		catch (Exception e) {e.printStackTrace();}
 		return returnData;
 	}
+
+	public Member readOneById(String id) 
+	{
+		// db연결
+		System.out.print("readOneById 함수 : ");
+		Member mb = new Member();
+		try 
+		{
+			conn = DBconn();
+			
+			// sql 작성
+			String sql = "select * from member where id = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			ResultSet rs = pstmt.executeQuery();
+			// ResultSet 제어
+			if(rs.next())
+			{
+				mb.setId(rs.getString("id"));
+				mb.setPassword(rs.getString("password"));
+				mb.setName(rs.getString("name"));
+				mb.setGender(rs.getString("gender"));
+				mb.setBirth(rs.getString("birth"));
+				mb.setMail(rs.getString("mail"));
+				mb.setPhone(rs.getString("phone"));
+				mb.setAddress(rs.getString("address"));
+			}
+			if(rs!=null) {rs.close();}
+			if(pstmt!=null) {rs.close();}
+			if(conn!=null) {conn.close();}
+		}
+		catch (Exception e) {e.printStackTrace();}
+		return mb;
+	}
+
+	//u
+	public void update(Member mb) 
+	{
+		//db연결
+		System.out.print("update 함수 : ");
+		try 
+		{
+			conn = DBconn();
+		//sql 작성
+			String sql = "update set password = ?, name = ?  where";
+		//resultset 작성
+		}
+		catch (Exception e) {e.printStackTrace();}
+	}
+	//d
+	
 }
