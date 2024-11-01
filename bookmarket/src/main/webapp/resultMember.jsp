@@ -7,7 +7,9 @@
 <title>회원 정보</title>
 </head>
 <body>
-
+<%
+	HttpSession session = request.getSession(false);
+%>
 <div class="container py-4">
    <jsp:include page="/menu.jsp" />
 

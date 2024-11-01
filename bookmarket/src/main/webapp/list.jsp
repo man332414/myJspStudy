@@ -19,6 +19,7 @@
       Member mb = (Member)session.getAttribute("member");
       if(mb != null){
          sessionId = mb.getId();
+         System.out.println(sessionId);
          sessionName = mb.getName();
       }
    }
@@ -34,12 +35,15 @@
 <title>Board</title>
 <script type="text/javascript">
    function checkForm() {   
-      if (${sessionId==null}) {
-         alert("로그인 해주세요.");
-         return false;
+      if (<%=sessionId==null%>) 
+      {
+    	console.log(<%=sessionId%>);
+        alert("로그인 해주세요.");
+        location.href = "member_login"
+		return false;
       }
 
-      location.href = "./BoardWriteForm?id=<%=sessionId%>"
+      location.href = "BoardWriteForm?id=<%=sessionId%>"
    }
 </script>
 </head>
@@ -69,10 +73,9 @@
                   <th>글쓴이</th>
                </tr>
                <%
-               
-                  for (int j = 0; j < boardList.size() ; j++){
+                	for (int j = 0; j < boardList.size() ; j++){
                      
-                     Board notice = (Board) boardList.get(j);
+                    	Board notice = (Board) boardList.get(j);
                %>
                <tr>
                   <td><%=notice.getNum()%></td>
@@ -91,14 +94,15 @@
          </div>
          <div align="center">
               <% 
-               for(int i=1; i<total_page; i++){
-              
+               for(int i=1; i<=total_page; i++)
+               {
+              		System.out.println("아이 "+i);
               %>   
-              <a href="./BoardListAction?pageNum=${i}">
+              <a href="BoardListAction?pageNum=<%=i%>">
                 <%if(pageNum==i){ %>
-                <font color='4C5317'><b>[${i}]</b></font>
+                <font color='4C5317'><b>[<%=i%>]</b></font>
                 <%}else{ %>
-                <font color='4C5317'> [${i}]</font>
+                <font color='4C5317'> [<%=i%>]</font>
                 <%} %>
               </a>
               <%} %>

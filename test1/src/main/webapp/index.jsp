@@ -6,10 +6,11 @@
 <title>Index</title>
 </head>
 <body>
-	<form action = "1_1">
-		<input type = "text" name = "name" placeholder = "이름을 작성하세요">
-		<input type = "text" name = "id" placeholder = "ID를 작성하세요">
-		<input type = "submit" value = "제출">
+	<form action = "2_1">
+		<p><input type = "text" name = "name" placeholder = "이름을 작성하세요"></p>
+		<p><input type = "text" name = "id" placeholder = "ID를 작성하세요"></p>
+		<p><input type = "password" name = "pw" placeholder = "password를 작성하세요"></p>
+		<p><input type = "submit" value = "제출"></p>
 	</form>
 </body>
 </html>

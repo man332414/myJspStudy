@@ -1,12 +1,17 @@
 package board_Controller;
 
 import java.io.IOException;
+import java.sql.Date;
+import java.sql.Timestamp;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
+import dao.BoardRepository;
 import dao.BookRepository;
+import dto.Board;
 import dto.Book;
+import dto.Member;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -24,83 +29,61 @@ public class Create_controller extends HttpServlet{
       //전처리
       HttpSession session = req.getSession(false);
       RequestDispatcher rs=null;
-      if(session != null) {
-         if(session.getAttribute("member") == null) {
-            System.out.println("세션존재 멤버 없음 이동한다");
-            rs = req.getRequestDispatcher("member_login");
-         }
-      }
-      else {
-         rs = req.getRequestDispatcher("writeForm.jsp");
-      }
-      rs.forward(req, resp);
+//      System.out.println(session);
       //모델이동
       //뷰이동
+      if(session != null) 
+      {
+    	  if(session.getAttribute("member") == null)
+    	  {
+    		  System.out.println("세션존재 멤버 없음 이동한다");
+    		  rs = req.getRequestDispatcher("member_login");
+    	  }
+    	  else 
+    	  {
+    		  rs = req.getRequestDispatcher("writeForm.jsp");
+    	  }
+      }
+      else
+      {
+    	  rs = req.getRequestDispatcher("member_login");
+      }
+      rs.forward(req, resp);
       
    }
 
    @Override
    protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
-      System.out.println("Create_Controller의 doPost()");
+      System.out.println("Create_Controller의 doPost() method");
       //전처리
-      request.setCharacterEncoding("UTF-8"); //한글아 깨지지마!
-      //String realFolder = "C:\\Users\\user\\eclipse-workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\BookMarket\\resources\\images";
-       // 일반 텍스트와 이미지 데이터가 썩여있으므로 분리가능한 객체가 필요하다.
-      String realFolder = request.getServletContext().getRealPath("resources/images"); 
-      String encType = "utf-8"; //인코딩 타입
-      int maxSize = 5 * 1024 * 1024; //최대 업로드될 파일의 크기5Mb
-      MultipartRequest multi = new MultipartRequest(request, realFolder, maxSize, encType, new DefaultFileRenamePolicy());
-      String bookId = multi.getParameter("bookId");
-      String name = multi.getParameter("name");
-      String author = multi.getParameter("author");
-      String publisher = multi.getParameter("publisher");
-      String releaseDate = multi.getParameter("releaseDate");   
-      String description = multi.getParameter("description");   
-      String category = multi.getParameter("category");
-      String condition = multi.getParameter("condition");
-      // 아래의 두개의 값은 갯수를 뜻하므로 정수로 변경되어야함
-      String unitPrice = multi.getParameter("unitPrice");
-      String unitsInStock = multi.getParameter("unitsInStock");
+      HttpSession session = request.getSession(false);
+      Member mb = (Member)session.getAttribute("member");
+      String id = mb.getId();
+      String name = request.getParameter("name");
+      String subject = request.getParameter("subject");
+      String content = request.getParameter("content");
+      Date currentDatetime = new Date(System.currentTimeMillis());
+      Date sqlDate = new Date(currentDatetime.getTime());
+      Timestamp regiset_day = new Timestamp(currentDatetime.getTime());
       
-      int price;
-
-      if (unitPrice.isEmpty()) {
-         price = 0;         
-      }
-      else {
-         price = Integer.valueOf(unitPrice);         
-      }
-
-      long stock;
-
-      if (unitsInStock.isEmpty()) {
-         stock = 0;         
-      }
-      else {
-         stock = Long.valueOf(unitsInStock);
-      }
-      //여기까지가 일반텍스트 전처리
-      // 저장된 이미지의 이름을 변수에 저장
-      String fileName = multi.getFilesystemName("bookImage");
+      int hit = 0;
       
-      Book bk = new Book();
-      bk.setBookId(bookId);
-      bk.setBookname(name);
-      bk.setAuthor(author);
-      bk.setPublisher(publisher);
-      bk.setReleaseDate(releaseDate);      
-      bk.setBookdescription(description);
-      bk.setCategory(category);
-      bk.setBookcondition(condition);
+      String ip = request.getRemoteAddr();
       
-      bk.setUnitPrice(price);
-      bk.setUnitsInStock(stock);
+      Board bd = new Board();
       
-      bk.setFilename(fileName);
+      bd.setId(id);
+      bd.setName(name);
+      bd.setSubject(subject);
+      bd.setContent(content);
+      bd.setRegist_day(regiset_day);
+      bd.setHit(hit);
+      bd.setIp(ip);
+      
       //모델이동
-      BookRepository br = BookRepository.getInstance();
-      br.addBook(bk);
+      BoardRepository br = BoardRepository.getBr();
+      br.create(bd);
       //뷰이동 : CUD는 보여줄 뷰어가 없음
-      resp.sendRedirect("books");      
+      resp.sendRedirect("BoardListAction?pageNum=1");
    }
 }

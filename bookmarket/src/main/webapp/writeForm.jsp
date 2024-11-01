@@ -1,9 +1,16 @@
-<%@ page session = "false" %>
+<%@page import="dto.Member"%>
 <%@ page contentType="text/html; charset=utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page session = "false" %>
+<%@ page import = "jakarta.servlet.http.HttpSession" %>
 <%
-	String name = (String) request.getAttribute("name");
-	
+	HttpSession session = request.getSession(false);
+	if(session == null)
+	{
+		System.out.println("WriteForm.jsp : Session 없음");
+	}
+	Member mb = (Member)session.getAttribute("member");
+	String name = mb.getName();
 %>
 <html>
 <head>
@@ -11,7 +18,8 @@
 <title>Board</title>
 </head>
 <script type="text/javascript">
-	function checkForm() {
+	function checkForm() 
+	{
 		if (!document.newWrite.name.value) {
 			alert("성명을 입력하세요.");
 			return false;
@@ -24,6 +32,11 @@
 			alert("내용을 입력하세요.");
 			return false;
 		}		
+	}
+	
+	function cancle()
+	{
+		location.href = "BoardListAction"
 	}
 </script>
 <body>
@@ -39,13 +52,13 @@
 
 	<div class="row align-items-md-stretch   text-center">	 	
 
-		<form name="newWrite" action="./BoardWriteAction.do"  method="post" onsubmit="return checkForm()">
+		<form name="newWrite" action="BoardWriteForm"  method="post" onsubmit="return checkForm()">
 			<input name="id" type="hidden" class="form-control"
 				value="${sessionId}">
 			<div class="mb-3 row">
 				<label class="col-sm-2 control-label" >성명</label>
 				<div class="col-sm-3">
-					<input name="name" type="text" class="form-control" value="<%=name %>"		placeholder="name">
+					<input name="name" type="text" class="form-control" value="<%=name %>" placeholder="name">
 				</div>
 			</div>
 			<div class="mb-3 row">
@@ -64,7 +77,7 @@
 			<div class="mb-3 row">
 				<div class="col-sm-offset-2 col-sm-10 ">
 				 <input type="submit" class="btn btn-primary " value="등록 ">				
-				<input type="reset" class="btn btn-primary " value="취소 ">
+				<input type="button" class="btn btn-primary " value="취소 " onclick = "cancle()">
 				</div>
 			</div>
 		</form>

@@ -22,7 +22,12 @@ public class boardReadAllController extends HttpServlet
 		int Limit = 5; //페이지당 출력할 글의 갯수를 제한
 		//전처리
 		System.out.println("boardList doGet 입장");
-		int pageNum = Integer.parseInt(req.getParameter("pageNum"));
+		String page = req.getParameter("pageNum");
+		int pageNum = 1;
+		if(page != null)
+		{
+			pageNum = Integer.parseInt(page);						
+		}
 		//모델연결
 		BoardRepository br = BoardRepository.getBr();
 		ArrayList<Board> arr = br.getAllContents();
@@ -36,6 +41,7 @@ public class boardReadAllController extends HttpServlet
 		{
 			total_page = (total_record/Limit)+1;
 		}
+		System.out.println(total_page);
 		//뷰 이동
 		req.setAttribute("total_page", total_page); //출력할 페이지의 갯수
 		req.setAttribute("total_record", total_record);	// 전체 글의 갯수

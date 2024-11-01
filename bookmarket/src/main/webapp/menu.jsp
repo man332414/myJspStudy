@@ -7,15 +7,18 @@
 </head>
 <body>
 <%
-	String sessionId = null;
-	HttpSession session = request.getSession(false);
+	String sessionId=null;
+	HttpSession session = null;
+	session = request.getSession(false);
+	System.out.println(session);
+	
 	if(session != null)
 	{
-		Member mb = (Member)session.getAttribute("member");
-		if(mb != null)
-		{
-			sessionId = mb.getName();
-		}
+	    Member mb = (Member) session.getAttribute("member");
+	    if(mb != null)
+	    {
+	        sessionId = mb.getName();   
+	    }
 	}
 %>
 		<header class = "pb-3 mb-4 border-bottom d-flex justify-content-between">

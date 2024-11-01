@@ -11,7 +11,7 @@
 	<%
 		HttpSession session = request.getSession(false);
 		session.invalidate();
-		response.sendRedirect("addBook");
+		response.sendRedirect("/bookmarket");
 	%>
 </body>
 </html>

@@ -24,7 +24,6 @@ public class BoardRepository
 	
 	Connection DBconn() throws Exception
 	{
-		conn = null;
 		Class.forName("com.mysql.jdbc.Driver");
 		String url = "jdbc:mysql://localhost:3306/bookmarketDB";
 		String root = "root";
@@ -60,15 +59,34 @@ public class BoardRepository
 	}	
 	
 	//create
-	static void create()
+	public void create(Board bd)
 	{
-		
+		System.out.println("create 입장");
+		//데베 연결
+		try 
+		{
+			conn = DBconn();
+		//쿼리전송
+			String sql = "insert into board(id, name, subject, content, regist_day, hit, ip) values(?, ?, ?, ?, ?, ?, ?) ";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, bd.getId());
+			pstmt.setString(2, bd.getName());
+			pstmt.setString(3, bd.getSubject());
+			pstmt.setString(4, bd.getContent());
+			pstmt.setTimestamp(5, bd.getRegist_day());
+			pstmt.setInt(6, bd.getHit());
+			pstmt.setString(7, bd.getIp());
+			
+			pstmt.executeUpdate();
+		//resultset 없음
+		} 
+		catch (Exception e) {e.printStackTrace();}
 	}
 	
 	//read All
 	public ArrayList<Board> getAllContents() 
 	{
-		System.out.println("getAllContents 입장");
+		System.out.print("getAllContents 입장");
 		ArrayList<Board> arr = new ArrayList<Board>();
 		try 
 		{
@@ -87,7 +105,7 @@ public class BoardRepository
 				board.setName(rs.getString("name"));
 				board.setSubject(rs.getString("subject"));
 				board.setContent(rs.getString("content"));
-				board.setRegist_day(rs.getTimestamp("id"));
+				board.setRegist_day(rs.getTimestamp("regist_day"));
 				board.setHit(rs.getInt("hit"));
 				board.setIp(rs.getString("ip"));
 				
